@@ -16,7 +16,10 @@ const App = () => {
 
         fetch(api)
         .then(response => response.json())
-        .then(data => setData(data))
+        .then(data => {
+            setData(data)
+            console.log(data)
+        })
 
         document.getElementById('textInput').value = '';
     }
@@ -26,7 +29,8 @@ const App = () => {
             <div className='formDiv'>
                 <form onSubmit={handleOnSubmit}>
                     <input id='textInput' type="text" onChange={handleOnChange} className='textInput' />
-                    <input id='submitInput' type="submit" value="submit" className='submitInput' />
+                    <input id='submitInput' type="submit" value="Fetch" className='submitInput' />
+                    <button onClick={handleOnSubmit}>Refresh</button>
                 </form>
             </div>
             <div className='treeViewDiv'>

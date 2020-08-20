@@ -11,9 +11,9 @@ const ObjectToken = ({ token }) => {
 
     useEffect(() => {
         token.type === 'file' ?
-            setSrc(require('../assets/static/file.png').default)
+            setSrc(require('../assets/static/fileIcon.png').default)
         :
-            setSrc(require('../assets/static/folder.png').default)
+            setSrc(require('../assets/static/folderIcon.png').default)
     }, []);
 
     return (
