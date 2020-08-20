@@ -3,7 +3,6 @@ import ObjectToken from './ObjectToken';
 import '../assets/styles/components/TreeView.scss';
 
 const TreeView = ({ data }) => {
-    console.log(data)
     return (
         <div className='treeContainerDiv'>
             {data &&
