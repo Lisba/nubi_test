@@ -48,10 +48,6 @@ module.exports = {
                     },
                 ],
             },
-            {
-                test: /\.mdx?$/,
-                use: ['babel-loader', '@mdx-js/loader']
-            },
         ],
     },
     devServer: {
@@ -61,7 +57,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html',
             filename: './index.html',
-            // favicon: './src/assets/static/favicon.png',
+            favicon: './src/assets/static/favicon.png',
         }),
         new MiniCssExtractPlugin({
             filename: 'assets/[name].css',

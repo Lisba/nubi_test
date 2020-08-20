@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lisbaldy de Jesus Ojeda Leon",
   "license": "ISC",
   "dependencies": {
     "react": "^16.13.1",
