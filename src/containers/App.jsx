@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import TreeView from '../components/TreeView';
 import '../assets/styles/containers/App.scss';
 
@@ -22,13 +22,17 @@ const App = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleOnSubmit}>
-                <input id='textInput' type="text" onChange={handleOnChange}/>
-                <input id='submitInput' type="submit" value="submit"/>
-            </form>
-            <TreeView data={data}/>
-        </div>
+        <Fragment>
+            <div className='formDiv'>
+                <form onSubmit={handleOnSubmit}>
+                    <input id='textInput' type="text" onChange={handleOnChange} className='textInput' />
+                    <input id='submitInput' type="submit" value="submit" className='submitInput' />
+                </form>
+            </div>
+            <div className='treeViewDiv'>
+                <TreeView data={data}/>
+            </div>
+        </Fragment>
     )
 }
 
