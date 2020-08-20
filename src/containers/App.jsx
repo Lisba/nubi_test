@@ -26,14 +26,13 @@ const App = () => {
 
     return (
         <Fragment>
-            <div className='formDiv'>
+            <div className="formDiv">
                 <form onSubmit={handleOnSubmit}>
-                    <input id='textInput' type="text" onChange={handleOnChange} className='textInput' />
-                    <input id='submitInput' type="submit" value="Fetch" className='submitInput' />
-                    <button onClick={handleOnSubmit}>Refresh</button>
+                    <input id="textInput" type="text" onChange={handleOnChange} className="textInput" />
+                    <input id="submitInput" type="submit" value="Fetch" className="submitInput" />
                 </form>
             </div>
-            <div className='treeViewDiv'>
+            <div className="treeViewDiv">
                 <TreeView data={data}/>
             </div>
         </Fragment>
