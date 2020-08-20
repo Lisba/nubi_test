@@ -1,10 +1,39 @@
 import React, { useState } from 'react';
-import '../assets/styles/App.scss';
+import TreeView from '../components/TreeView';
+import '../assets/styles/containers/App.scss';
 
 const App = () => {
 
     const [api, setApi] = useState('');
     const [data, setData] = useState('');
+
+    let dataExample = [
+        {
+            type: "directory",
+            name: "uno",
+            files: [
+                {
+                    type: "directory",
+                    name: "subUno",
+                    files: [
+                        {
+                            type: "directory",
+                            name: "subSubUno",
+                            files: []
+                        },
+                        {
+                            type: "file",
+                            name: "file1.exe"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            type: "file",
+            name: "file1.exe"
+        }
+    ];
 
     const handleOnChange = (event) => {
         setApi(event.target.value);
@@ -28,6 +57,7 @@ const App = () => {
                 <input id='textInput' type="text" onChange={handleOnChange}/>
                 <input id='submitInput' type="submit" value="submit"/>
             </form>
+            <TreeView data={dataExample}/>
         </div>
     )
 }
