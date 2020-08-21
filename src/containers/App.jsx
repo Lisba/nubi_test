@@ -1,5 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import TreeView from '../components/TreeView';
+import Button from '../components/Button';
+import Input from '../components/Input';
 import '../assets/styles/containers/App.scss';
 
 const App = () => {
@@ -28,8 +30,8 @@ const App = () => {
         <Fragment>
             <div className="formDiv">
                 <form onSubmit={handleOnSubmit}>
-                    <input id="textInput" type="text" onChange={handleOnChange} className="textInput" />
-                    <input id="submitInput" type="submit" value="Fetch" className="submitInput" />
+                    <Input id="textInput" type="text" onChange={handleOnChange} className="textInput" />
+                    <Button id="submitInput" type="submit" value="Fetch" className="submitInput" />
                 </form>
             </div>
             <div className="treeViewDiv">

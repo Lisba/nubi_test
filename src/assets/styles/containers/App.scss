@@ -36,41 +36,6 @@ body > div {
     flex-wrap: wrap;
 }
 
-.textInput {
-    width: 70%;
-    height: 50px;
-    margin-bottom: 20px;
-    padding: 0px 20px;
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-    border: 2px solid white;
-    border-radius: 25px;
-    font-size: 16px;
-    outline: none;
-}
-
-.submitInput {
-    width: 20%;
-    height: 50px;
-    color: black;
-    background-color: #2EDCB4;
-    border-radius: 13px;
-    font-size: 120%;
-    box-shadow: inset 0px 0px 12px 0px #25a88a;
-    border: 2px solid #2EDCB4;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.submitInput:hover {
-    background-color: rgba(0,0,0,0);
-    color: $main-theme-color;
-}
-
-.submitInput:focus {
-    outline: none;
-}
-
 .treeViewDiv {
     width: 100%;
     display: flex;
