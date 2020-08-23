@@ -11,7 +11,7 @@ const ObjectToken = ({ token }) => {
     });
 
     const handleOnClick = (event) => {
-        if (display)
+        if(display)
         {
             event.target.nextSibling.style.display = 'none';
             setDisplay((prevState) => !prevState);
