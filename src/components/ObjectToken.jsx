@@ -11,28 +11,39 @@ const ObjectToken = ({ token }) => {
     });
 
     const handleOnClick = (event) => {
-        if(display)
+        if(token.type === 'directory')
         {
-            event.target.nextSibling.style.display = 'none';
-            setDisplay((prevState) => !prevState);
+            if(display)
+            {
+                event.target.nextSibling.style.display = 'none';
+                setDisplay((prevState) => !prevState);
+                setSrc(require('../assets/static/closeFolderIcon.png').default);
+            }
+            else
+            {
+                event.target.nextSibling.style.display = 'block';
+                setDisplay((prevState) => !prevState);
+                setSrc(require('../assets/static/openFolderIcon.png').default);
+            }
         }
-        else
+    }
+
+    const handleOnMouseOver = (event) => {
+        if(token.type === 'directory')
         {
-            event.target.nextSibling.style.display = 'block';
-            setDisplay((prevState) => !prevState);
+            event.target.style.cursor = 'pointer';
         }
     }
 
     useEffect(() => {
-        token.type === 'file' ?
-            setSrc(require('../assets/static/fileIcon.png').default)
-        :
-            setSrc(require('../assets/static/folderIcon.png').default)
+        token.type === 'file'
+        ?  setSrc(require('../assets/static/fileIcon.png').default)
+        :  setSrc(require('../assets/static/openFolderIcon.png').default);
     }, []);
 
     return (
         <div className='objectTokenDiv'>
-            <div onClick={handleOnClick}>
+            <div onClick={handleOnClick} onMouseOver={handleOnMouseOver}>
                 <img src={src} className='iconImage'></img>
                 {token.name}
             </div>
